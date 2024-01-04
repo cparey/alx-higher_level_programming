@@ -1,4 +1,4 @@
-if _name_ == "_main_":
+if __name__ == "__main__":
     import sys
 
     nargs = len(sys.argv) - 1
@@ -7,7 +7,7 @@ if _name_ == "_main_":
         sys.exit(1)
 
     op = sys.argv[2]
-    if op != '+' and op != '-' and op != '*' and op != '/':
+    if op not in {'+', '-', '*', '/'}:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
